@@ -28,7 +28,7 @@ Currently, has only one main feature.
 1. Clone the repository;
 2. Open the project in your IDE of choice;
 3. Build the project;
-4. The .exe file will be located in the `bid/Debug` folder.
+4. The .exe file will be located in the `bin/Debug` folder.
 
 ## Configuration
 
