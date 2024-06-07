@@ -1,0 +1,11 @@
+F:\unique-files\obj\Release\unique-files.csproj.AssemblyReference.cache
+F:\unique-files\obj\Release\unique-files.csproj.SuggestedBindingRedirects.cache
+F:\unique-files\obj\Release\unique_files.Form1.resources
+F:\unique-files\obj\Release\unique_files.Properties.Resources.resources
+F:\unique-files\obj\Release\unique-files.csproj.GenerateResource.cache
+F:\unique-files\obj\Release\unique-files.csproj.CoreCompileInputs.cache
+F:\unique-files\bin\Release\different-files-extractor.exe.config
+F:\unique-files\bin\Release\different-files-extractor.exe
+F:\unique-files\bin\Release\different-files-extractor.pdb
+F:\unique-files\obj\Release\different-files-extractor.exe
+F:\unique-files\obj\Release\different-files-extractor.pdb
