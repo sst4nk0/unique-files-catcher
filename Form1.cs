@@ -173,6 +173,48 @@ namespace unique_files
             }
         }
 
+        private void mainDirectorySetButton_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog setMainFolderDialog = new FolderBrowserDialog
+            {
+                Description = "Select main folder (with no files changed)",
+                ShowNewFolderButton = false
+            };
 
+            if (setMainFolderDialog.ShowDialog() == DialogResult.OK)
+            {
+                mainDirectory.Text = setMainFolderDialog.SelectedPath;
+            }
+            setMainFolderDialog.Dispose();
+        }
+
+        private void newDirectorySetButton_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog setNewFolderDialog = new FolderBrowserDialog()
+            {
+                Description = "Select new folder (with some changes)",
+                ShowNewFolderButton = false
+            };
+
+            if (setNewFolderDialog.ShowDialog() == DialogResult.OK)
+            {
+                newDirectory.Text = setNewFolderDialog.SelectedPath;
+            }
+            setNewFolderDialog.Dispose();
+        }
+
+        private void outputDirectorySetButton_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog setOutputFolderDialog = new FolderBrowserDialog()
+            {
+                Description = "Select output folder (a place to save extracted files)",
+                ShowNewFolderButton = true
+            };
+            if (setOutputFolderDialog.ShowDialog() == DialogResult.OK)
+            {
+                outputDirectory.Text = setOutputFolderDialog.SelectedPath;
+            }
+            setOutputFolderDialog.Dispose();
+        }
     }
 }
