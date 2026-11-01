@@ -162,7 +162,7 @@
             this.MinimumSize = new System.Drawing.Size(616, 325);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "DFE";
+            this.Text = "Unique files catcher";
             ((System.ComponentModel.ISupportInitialize)(this.loaderPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

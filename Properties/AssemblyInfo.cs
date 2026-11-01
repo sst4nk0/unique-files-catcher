@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Общие сведения об этой сборке предоставляются следующим набором
 // набора атрибутов. Измените значения этих атрибутов для изменения сведений,
 // связанных со сборкой.
-[assembly: AssemblyTitle("different-files-extractor")]
+[assembly: AssemblyTitle("unique-files-catcher")]
 [assembly: AssemblyDescription("A program to compare №1 and №2 folders with files, and extract different files from №2 folder")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("sst4nk0")]
-[assembly: AssemblyProduct("different-files-extractor")]
+[assembly: AssemblyProduct("unique-files-catcher")]
 [assembly: AssemblyCopyright("Copyright ©  2026")]
 [assembly: AssemblyTrademark("-")]
 [assembly: AssemblyCulture("")]
