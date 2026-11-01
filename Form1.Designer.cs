@@ -39,10 +39,7 @@
             this.loadingLabel = new System.Windows.Forms.Label();
             this.progressCoutLabel = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.saveMain = new System.Windows.Forms.Button();
             this.loaderPic = new System.Windows.Forms.PictureBox();
-            this.saveNew = new System.Windows.Forms.Button();
-            this.saveOutput = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.loaderPic)).BeginInit();
             this.SuspendLayout();
             // 
@@ -133,19 +130,6 @@
             this.progressCoutLabel.Text = "0/0";
             this.progressCoutLabel.Visible = false;
             // 
-            // saveMain
-            // 
-            this.saveMain.FlatAppearance.BorderSize = 0;
-            this.saveMain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveMain.Image = global::unique_files.Properties.Resources.save;
-            this.saveMain.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.saveMain.Location = new System.Drawing.Point(237, 14);
-            this.saveMain.Name = "saveMain";
-            this.saveMain.Size = new System.Drawing.Size(30, 44);
-            this.saveMain.TabIndex = 12;
-            this.saveMain.UseVisualStyleBackColor = true;
-            this.saveMain.Click += new System.EventHandler(this.saveMain_Click);
-            // 
             // loaderPic
             // 
             this.loaderPic.Image = global::unique_files.Properties.Resources.loader;
@@ -156,32 +140,6 @@
             this.loaderPic.TabIndex = 9;
             this.loaderPic.TabStop = false;
             this.loaderPic.Visible = false;
-            // 
-            // saveNew
-            // 
-            this.saveNew.FlatAppearance.BorderSize = 0;
-            this.saveNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveNew.Image = global::unique_files.Properties.Resources.save;
-            this.saveNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.saveNew.Location = new System.Drawing.Point(237, 64);
-            this.saveNew.Name = "saveNew";
-            this.saveNew.Size = new System.Drawing.Size(30, 44);
-            this.saveNew.TabIndex = 13;
-            this.saveNew.UseVisualStyleBackColor = true;
-            this.saveNew.Click += new System.EventHandler(this.saveNew_Click);
-            // 
-            // saveOutput
-            // 
-            this.saveOutput.FlatAppearance.BorderSize = 0;
-            this.saveOutput.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveOutput.Image = global::unique_files.Properties.Resources.save;
-            this.saveOutput.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.saveOutput.Location = new System.Drawing.Point(237, 152);
-            this.saveOutput.Name = "saveOutput";
-            this.saveOutput.Size = new System.Drawing.Size(30, 44);
-            this.saveOutput.TabIndex = 14;
-            this.saveOutput.UseVisualStyleBackColor = true;
-            this.saveOutput.Click += new System.EventHandler(this.saveOutput_Click);
             // 
             // Form1
             // 
@@ -198,9 +156,6 @@
             this.Controls.Add(this.newDirectory);
             this.Controls.Add(this.mainDirectory);
             this.Controls.Add(this.loaderPic);
-            this.Controls.Add(this.saveMain);
-            this.Controls.Add(this.saveNew);
-            this.Controls.Add(this.saveOutput);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(616, 325);
@@ -227,9 +182,6 @@
         private System.Windows.Forms.Label loadingLabel;
         private System.Windows.Forms.Label progressCoutLabel;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.Button saveMain;
-        private System.Windows.Forms.Button saveNew;
-        private System.Windows.Forms.Button saveOutput;
     }
 }
 

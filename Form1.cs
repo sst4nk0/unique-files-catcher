@@ -40,6 +40,11 @@ namespace unique_files
             loadingLabel.Visible = true;
             progressCoutLabel.Visible = true;
             proceed.Enabled = false;
+            //Save folder autofill settings
+            Properties.Settings.Default.mainDirectory = mainDirectory.Text;
+            Properties.Settings.Default.newDirectory = newDirectory.Text;
+            Properties.Settings.Default.outputDirectory = outputDirectory.Text;
+            Properties.Settings.Default.Save();
             //Runs background file copying
             backgroundWorker1.RunWorkerAsync();
         }
@@ -168,22 +173,6 @@ namespace unique_files
             }
         }
 
-        private void saveMain_Click(object sender, EventArgs e)
-        {
-            Properties.Settings.Default.mainDirectory = mainDirectory.Text;
-            Properties.Settings.Default.Save();
-        }
 
-        private void saveNew_Click(object sender, EventArgs e)
-        {
-            Properties.Settings.Default.newDirectory = newDirectory.Text;
-            Properties.Settings.Default.Save();
-        }
-
-        private void saveOutput_Click(object sender, EventArgs e)
-        {
-            Properties.Settings.Default.outputDirectory = outputDirectory.Text;
-            Properties.Settings.Default.Save();
-        }  
     }
 }

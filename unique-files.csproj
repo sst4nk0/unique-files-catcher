@@ -117,7 +117,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon64.ico" />
-    <None Include="Resources\save.png" />
     <None Include="Resources\loader.gif" />
   </ItemGroup>
   <ItemGroup>
