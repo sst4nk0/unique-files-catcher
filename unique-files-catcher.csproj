@@ -116,6 +116,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".gitignore" />
     <Content Include="icon64.ico" />
     <None Include="Resources\loader.gif" />
   </ItemGroup>
