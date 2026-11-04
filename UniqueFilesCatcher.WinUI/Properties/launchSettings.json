@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "UniqueFilesCatcher.WinUI (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "UniqueFilesCatcher.WinUI (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

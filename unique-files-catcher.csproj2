@@ -1,0 +1,722 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6591D2F0-F02B-4111-BFFF-B1C32F3D2BFE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>unique_files</RootNamespace>
+    <AssemblyName>different-files-extractor</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>en</TargetCulture>
+    <ProductName>Different Files Extractor</ProductName>
+    <PublisherName>sst4nk0</PublisherName>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon64.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FileCompare.cs" />
+    <Compile Include="Form1.cs" />
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="UniqueFilesCatcher.WinUI\App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UniqueFilesCatcher.WinUI\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net10.0-windows10.0.19041.0\win-x64\.NETCoreApp,Version=v10.0.AssemblyAttributes.cs" />
+    <Compile Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net10.0-windows10.0.19041.0\win-x64\App.g.cs" />
+    <Compile Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net10.0-windows10.0.19041.0\win-x64\App.g.i.cs" />
+    <Compile Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net10.0-windows10.0.19041.0\win-x64\MainWindow.g.cs" />
+    <Compile Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net10.0-windows10.0.19041.0\win-x64\MainWindow.g.i.cs" />
+    <Compile Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net10.0-windows10.0.19041.0\win-x64\UniqueFilesCatcher.WinUI.AssemblyInfo.cs" />
+    <Compile Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net10.0-windows10.0.19041.0\win-x64\XamlTypeInfo.g.cs" />
+    <Compile Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs" />
+    <Compile Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\App.g.cs" />
+    <Compile Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\App.g.i.cs" />
+    <Compile Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\MainWindow.g.cs" />
+    <Compile Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\MainWindow.g.i.cs" />
+    <Compile Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\UniqueFilesCatcher.WinUI.AssemblyInfo.cs" />
+    <Compile Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\XamlTypeInfo.g.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="UniqueFilesCatcher.WinUI\app.manifest" />
+    <None Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\App.xbf" />
+    <None Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Microsoft.Web.WebView2.Core.winmd" />
+    <None Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\resources.pri" />
+    <None Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\UniqueFilesCatcher.WinUI.deps.json" />
+    <None Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\UniqueFilesCatcher.WinUI.runtimeconfig.json" />
+    <None Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\vs.appxrecipe" />
+    <None Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\MainWindow.xbf" />
+    <None Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\resources.pri" />
+    <None Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\UniqueFilesCatcher.WinUI.build.appxrecipe" />
+    <None Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\UniqueFilesCatcher.WinUI.deps.json" />
+    <None Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\UniqueFilesCatcher.WinUI.runtimeconfig.json" />
+    <None Include="UniqueFilesCatcher.WinUI\obj\project.assets.json" />
+    <None Include="UniqueFilesCatcher.WinUI\obj\project.nuget.cache" />
+    <None Include="UniqueFilesCatcher.WinUI\obj\UniqueFilesCatcher.WinUI.csproj.nuget.dgspec.json" />
+    <None Include="UniqueFilesCatcher.WinUI\obj\UniqueFilesCatcher.WinUI.csproj.nuget.g.props" />
+    <None Include="UniqueFilesCatcher.WinUI\obj\UniqueFilesCatcher.WinUI.csproj.nuget.g.targets" />
+    <None Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net10.0-windows10.0.19041.0\win-x64\UniqueFilesCatcher.WinUI.AssemblyInfoInputs.cache" />
+    <None Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net10.0-windows10.0.19041.0\win-x64\UniqueFilesCatcher.WinUI.assets.cache" />
+    <None Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net10.0-windows10.0.19041.0\win-x64\UniqueFilesCatcher.WinUI.csproj.AssemblyReference.cache" />
+    <None Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net10.0-windows10.0.19041.0\win-x64\UniqueFilesCatcher.WinUI.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\.winmd_cache\%24Microsoft.Web.WebView2.Core.winmd_639039823460000000.json" />
+    <None Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\App.xbf" />
+    <None Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\embed\App.xbf" />
+    <None Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\embed\embed.resfiles" />
+    <None Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\embed\embed.resfiles.intermediate" />
+    <None Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\embed\MainWindow.xbf" />
+    <None Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\excluded.layout.resfiles" />
+    <None Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\excluded.layout.resfiles.intermediate" />
+    <None Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\filtered.layout.resfiles" />
+    <None Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\filtered.layout.resfiles.intermediate" />
+    <None Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\MainWindow.xbf" />
+    <None Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\pri.resfiles" />
+    <None Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\pri.resfiles.intermediate" />
+    <None Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\priconfig.xml.intermediate" />
+    <None Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\qualifiers.txt.intermediate" />
+    <None Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\resources.resfiles" />
+    <None Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\resources.resfiles.intermediate" />
+    <None Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\unfiltered.layout.resfiles" />
+    <None Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\unfiltered.layout.resfiles.intermediate" />
+    <None Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\UniqueFi.7CBA04D5.Up2Date" />
+    <None Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\UniqueFilesCatcher.WinUI.AssemblyInfoInputs.cache" />
+    <None Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\UniqueFilesCatcher.WinUI.assets.cache" />
+    <None Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\UniqueFilesCatcher.WinUI.csproj.AssemblyReference.cache" />
+    <None Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\UniqueFilesCatcher.WinUI.csproj.BuildWithSkipAnalyzers" />
+    <None Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\UniqueFilesCatcher.WinUI.csproj.CoreCompileInputs.cache" />
+    <None Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\UniqueFilesCatcher.WinUI.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\UniqueFilesCatcher.WinUI.genruntimeconfig.cache" />
+    <None Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\UniqueFilesCatcher.WinUI.sourcelink.json" />
+    <None Include="UniqueFilesCatcher.WinUI\Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UniqueFilesCatcher.WinUI\Properties\launchSettings.json" />
+    <None Include="UniqueFilesCatcher.WinUI\Properties\PublishProfiles\win-arm64.pubxml" />
+    <None Include="UniqueFilesCatcher.WinUI\Properties\PublishProfiles\win-x64.pubxml" />
+    <None Include="UniqueFilesCatcher.WinUI\Properties\PublishProfiles\win-x86.pubxml" />
+    <None Include="UniqueFilesCatcher.WinUI\UniqueFilesCatcher.WinUI.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
+    <Content Include="icon64.ico" />
+    <Content Include="UniqueFilesCatcher.WinUI\Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="UniqueFilesCatcher.WinUI\Assets\SplashScreen.scale-200.png" />
+    <Content Include="UniqueFilesCatcher.WinUI\Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="UniqueFilesCatcher.WinUI\Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="UniqueFilesCatcher.WinUI\Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="UniqueFilesCatcher.WinUI\Assets\StoreLogo.png" />
+    <Content Include="UniqueFilesCatcher.WinUI\Assets\Wide310x150Logo.scale-200.png" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppxManifest.xml" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\AppxManifest.xml" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Assets\SplashScreen.scale-200.png" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Assets\StoreLogo.png" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Assets\Wide310x150Logo.scale-200.png" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\clretwrc.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\clrgc.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\clrjit.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\coreclr.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\createdump.exe" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\DirectML.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\hostfxr.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\hostpolicy.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Microsoft.CSharp.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Microsoft.Graphics.Imaging.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Microsoft.InteractiveExperiences.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Microsoft.ML.OnnxRuntime.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Microsoft.Security.Authentication.OAuth.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Microsoft.VisualBasic.Core.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Microsoft.VisualBasic.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Microsoft.Web.WebView2.Core.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Microsoft.Web.WebView2.Core.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Microsoft.Win32.Primitives.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Microsoft.Win32.Registry.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Microsoft.Windows.AI.ContentSafety.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Microsoft.Windows.AI.Foundation.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Microsoft.Windows.AI.Imaging.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Microsoft.Windows.AI.MachineLearning.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Microsoft.Windows.AI.MachineLearning.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Microsoft.Windows.AI.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Microsoft.Windows.AI.Text.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Microsoft.Windows.AI.Video.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Microsoft.Windows.ApplicationModel.Background.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Microsoft.Windows.ApplicationModel.Background.UniversalBGTask.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Microsoft.Windows.ApplicationModel.DynamicDependency.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Microsoft.Windows.ApplicationModel.Resources.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Microsoft.Windows.ApplicationModel.WindowsAppRuntime.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Microsoft.Windows.AppLifecycle.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Microsoft.Windows.AppNotifications.Builder.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Microsoft.Windows.AppNotifications.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Microsoft.Windows.BadgeNotifications.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Microsoft.Windows.Foundation.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Microsoft.Windows.Management.Deployment.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Microsoft.Windows.Media.Capture.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Microsoft.Windows.PushNotifications.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Microsoft.Windows.SDK.NET.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Microsoft.Windows.Search.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Microsoft.Windows.Security.AccessControl.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Microsoft.Windows.Storage.Pickers.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Microsoft.Windows.Storage.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Microsoft.Windows.System.Power.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Microsoft.Windows.System.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Microsoft.Windows.Widgets.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Microsoft.WindowsAppRuntime.Bootstrap.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\Microsoft.WinUI.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\mscordaccore.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\mscordaccore_amd64_amd64_8.0.3326.52219.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\mscordbi.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\mscorlib.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\mscorrc.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\msquic.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\netstandard.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\onnxruntime.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.AppContext.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Buffers.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Collections.Concurrent.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Collections.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Collections.Immutable.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Collections.NonGeneric.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Collections.Specialized.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.ComponentModel.Annotations.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.ComponentModel.DataAnnotations.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.ComponentModel.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.ComponentModel.EventBasedAsync.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.ComponentModel.Primitives.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.ComponentModel.TypeConverter.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Configuration.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Console.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Core.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Data.Common.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Data.DataSetExtensions.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Data.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Diagnostics.Contracts.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Diagnostics.Debug.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Diagnostics.DiagnosticSource.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Diagnostics.FileVersionInfo.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Diagnostics.Process.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Diagnostics.StackTrace.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Diagnostics.TextWriterTraceListener.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Diagnostics.Tools.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Diagnostics.TraceSource.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Diagnostics.Tracing.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Drawing.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Drawing.Primitives.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Dynamic.Runtime.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Formats.Asn1.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Formats.Tar.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Globalization.Calendars.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Globalization.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Globalization.Extensions.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.IO.Compression.Brotli.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.IO.Compression.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.IO.Compression.FileSystem.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.IO.Compression.Native.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.IO.Compression.ZipFile.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.IO.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.IO.FileSystem.AccessControl.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.IO.FileSystem.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.IO.FileSystem.DriveInfo.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.IO.FileSystem.Watcher.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.IO.IsolatedStorage.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.IO.MemoryMappedFiles.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.IO.Pipes.AccessControl.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.IO.Pipes.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.IO.UnmanagedMemoryStream.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Linq.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Linq.Expressions.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Linq.Parallel.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Linq.Queryable.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Memory.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Net.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Net.Http.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Net.Http.Json.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Net.HttpListener.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Net.Mail.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Net.NameResolution.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Net.NetworkInformation.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Net.Ping.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Net.Primitives.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Net.Quic.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Net.Requests.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Net.Security.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Net.ServicePoint.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Net.Sockets.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Net.WebClient.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Net.WebHeaderCollection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Net.WebProxy.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Net.WebSockets.Client.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Net.WebSockets.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Numerics.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Numerics.Tensors.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Numerics.Vectors.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.ObjectModel.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Private.CoreLib.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Private.DataContractSerialization.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Private.Uri.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Private.Xml.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Private.Xml.Linq.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Reflection.DispatchProxy.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Reflection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Reflection.Emit.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Reflection.Emit.ILGeneration.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Reflection.Emit.Lightweight.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Reflection.Extensions.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Reflection.Metadata.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Reflection.Primitives.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Reflection.TypeExtensions.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Resources.Reader.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Resources.ResourceManager.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Resources.Writer.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Runtime.CompilerServices.Unsafe.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Runtime.CompilerServices.VisualC.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Runtime.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Runtime.Extensions.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Runtime.Handles.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Runtime.InteropServices.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Runtime.InteropServices.JavaScript.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Runtime.InteropServices.RuntimeInformation.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Runtime.Intrinsics.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Runtime.Loader.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Runtime.Numerics.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Runtime.Serialization.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Runtime.Serialization.Formatters.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Runtime.Serialization.Json.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Runtime.Serialization.Primitives.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Runtime.Serialization.Xml.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Security.AccessControl.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Security.Claims.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Security.Cryptography.Cng.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Security.Cryptography.Csp.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Security.Cryptography.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Security.Cryptography.OpenSsl.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Security.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Security.Principal.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Security.Principal.Windows.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Security.SecureString.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.ServiceModel.Web.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.ServiceProcess.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Text.Encoding.CodePages.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Text.Encoding.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Text.Encoding.Extensions.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Text.Encodings.Web.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Text.Json.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Text.RegularExpressions.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Threading.Channels.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Threading.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Threading.Overlapped.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Threading.Tasks.Dataflow.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Threading.Tasks.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Threading.Tasks.Extensions.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Threading.Tasks.Parallel.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Threading.Thread.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Threading.ThreadPool.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Threading.Timer.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Transactions.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Transactions.Local.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.ValueTuple.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Web.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Web.HttpUtility.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Windows.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Xml.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Xml.Linq.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Xml.ReaderWriter.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Xml.Serialization.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Xml.XDocument.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Xml.XmlDocument.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Xml.XmlSerializer.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Xml.XPath.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\System.Xml.XPath.XDocument.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\UniqueFilesCatcher.WinUI.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\UniqueFilesCatcher.WinUI.exe" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\WebView2Loader.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\WindowsBase.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX\WinRT.Runtime.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\clretwrc.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\clrgc.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\clrjit.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\coreclr.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\createdump.exe" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\hostfxr.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\hostpolicy.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.CSharp.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.Graphics.Imaging.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.InteractiveExperiences.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.ML.OnnxRuntime.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.Security.Authentication.OAuth.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.VisualBasic.Core.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.VisualBasic.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.Web.WebView2.Core.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.Web.WebView2.Core.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.Win32.Primitives.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.Win32.Registry.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.Windows.AI.ContentSafety.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.Windows.AI.Foundation.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.Windows.AI.Imaging.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.Windows.AI.MachineLearning.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.Windows.AI.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.Windows.AI.Text.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.Windows.AI.Video.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.Windows.ApplicationModel.Background.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.Windows.ApplicationModel.Background.UniversalBGTask.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.Windows.ApplicationModel.DynamicDependency.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.Windows.ApplicationModel.Resources.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.Windows.ApplicationModel.WindowsAppRuntime.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.Windows.AppLifecycle.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.Windows.AppNotifications.Builder.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.Windows.AppNotifications.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.Windows.BadgeNotifications.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.Windows.Foundation.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.Windows.Management.Deployment.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.Windows.Media.Capture.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.Windows.PushNotifications.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.Windows.SDK.NET.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.Windows.Search.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.Windows.Security.AccessControl.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.Windows.Storage.Pickers.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.Windows.Storage.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.Windows.System.Power.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.Windows.System.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.Windows.Widgets.Projection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.WindowsAppRuntime.Bootstrap.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Microsoft.WinUI.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\mscordaccore.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\mscordaccore_amd64_amd64_8.0.3326.52219.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\mscordbi.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\mscorlib.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\mscorrc.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\msquic.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\netstandard.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.AppContext.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Buffers.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Collections.Concurrent.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Collections.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Collections.Immutable.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Collections.NonGeneric.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Collections.Specialized.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.ComponentModel.Annotations.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.ComponentModel.DataAnnotations.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.ComponentModel.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.ComponentModel.EventBasedAsync.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.ComponentModel.Primitives.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.ComponentModel.TypeConverter.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Configuration.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Console.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Core.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Data.Common.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Data.DataSetExtensions.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Data.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Diagnostics.Contracts.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Diagnostics.Debug.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Diagnostics.DiagnosticSource.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Diagnostics.FileVersionInfo.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Diagnostics.Process.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Diagnostics.StackTrace.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Diagnostics.TextWriterTraceListener.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Diagnostics.Tools.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Diagnostics.TraceSource.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Diagnostics.Tracing.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Drawing.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Drawing.Primitives.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Dynamic.Runtime.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Formats.Asn1.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Formats.Tar.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Globalization.Calendars.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Globalization.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Globalization.Extensions.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.IO.Compression.Brotli.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.IO.Compression.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.IO.Compression.FileSystem.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.IO.Compression.Native.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.IO.Compression.ZipFile.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.IO.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.IO.FileSystem.AccessControl.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.IO.FileSystem.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.IO.FileSystem.DriveInfo.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.IO.FileSystem.Watcher.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.IO.IsolatedStorage.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.IO.MemoryMappedFiles.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.IO.Pipes.AccessControl.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.IO.Pipes.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.IO.UnmanagedMemoryStream.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Linq.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Linq.Expressions.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Linq.Parallel.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Linq.Queryable.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Memory.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Net.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Net.Http.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Net.Http.Json.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Net.HttpListener.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Net.Mail.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Net.NameResolution.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Net.NetworkInformation.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Net.Ping.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Net.Primitives.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Net.Quic.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Net.Requests.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Net.Security.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Net.ServicePoint.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Net.Sockets.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Net.WebClient.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Net.WebHeaderCollection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Net.WebProxy.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Net.WebSockets.Client.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Net.WebSockets.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Numerics.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Numerics.Tensors.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Numerics.Vectors.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.ObjectModel.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Private.CoreLib.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Private.DataContractSerialization.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Private.Uri.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Private.Xml.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Private.Xml.Linq.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Reflection.DispatchProxy.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Reflection.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Reflection.Emit.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Reflection.Emit.ILGeneration.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Reflection.Emit.Lightweight.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Reflection.Extensions.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Reflection.Metadata.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Reflection.Primitives.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Reflection.TypeExtensions.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Resources.Reader.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Resources.ResourceManager.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Resources.Writer.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Runtime.CompilerServices.Unsafe.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Runtime.CompilerServices.VisualC.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Runtime.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Runtime.Extensions.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Runtime.Handles.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Runtime.InteropServices.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Runtime.InteropServices.JavaScript.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Runtime.InteropServices.RuntimeInformation.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Runtime.Intrinsics.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Runtime.Loader.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Runtime.Numerics.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Runtime.Serialization.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Runtime.Serialization.Formatters.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Runtime.Serialization.Json.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Runtime.Serialization.Primitives.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Runtime.Serialization.Xml.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Security.AccessControl.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Security.Claims.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Security.Cryptography.Cng.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Security.Cryptography.Csp.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Security.Cryptography.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Security.Cryptography.OpenSsl.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Security.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Security.Principal.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Security.Principal.Windows.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Security.SecureString.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.ServiceModel.Web.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.ServiceProcess.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Text.Encoding.CodePages.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Text.Encoding.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Text.Encoding.Extensions.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Text.Encodings.Web.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Text.Json.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Text.RegularExpressions.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Threading.Channels.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Threading.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Threading.Overlapped.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Threading.Tasks.Dataflow.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Threading.Tasks.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Threading.Tasks.Extensions.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Threading.Tasks.Parallel.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Threading.Thread.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Threading.ThreadPool.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Threading.Timer.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Transactions.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Transactions.Local.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.ValueTuple.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Web.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Web.HttpUtility.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Windows.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Xml.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Xml.Linq.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Xml.ReaderWriter.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Xml.Serialization.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Xml.XDocument.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Xml.XmlDocument.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Xml.XmlSerializer.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Xml.XPath.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Xml.XPath.XDocument.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\UniqueFilesCatcher.WinUI.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\UniqueFilesCatcher.WinUI.exe" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\UniqueFilesCatcher.WinUI.pdb" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\WebView2Loader.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\WindowsBase.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\WinRT.Runtime.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net10.0-windows10.0.19041.0\win-x64\XamlSaveStateFile.xml" />
+    <Content Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\apphost.exe" />
+    <Content Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\intermediatexaml\UniqueFilesCatcher.WinUI.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\MultipleQualifiersPerDimensionFound.txt" />
+    <Content Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\priconfig.xml" />
+    <Content Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\ProjectArchitectures.txt" />
+    <Content Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\qualifiers.txt" />
+    <Content Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\refint\UniqueFilesCatcher.WinUI.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\ref\UniqueFilesCatcher.WinUI.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\UniqueFilesCatcher.WinUI.csproj.FileListAbsolute.txt" />
+    <Content Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\UniqueFilesCatcher.WinUI.dll" />
+    <Content Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\UniqueFilesCatcher.WinUI.pdb" />
+    <Content Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\XamlSaveStateFile.xml" />
+    <Content Include="UniqueFilesCatcher.WinUI\UniqueFilesCatcher.WinUI.csproj.user" />
+    <Content Include="UniqueFilesCatcher.WinUI\UniqueFilesCatcher.WinUI.slnx" />
+    <None Include="Resources\loader.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="UniqueFilesCatcher.WinUI\App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UniqueFilesCatcher.WinUI\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UniqueFilesCatcher.WinUI\bin\Debug\net8.0-windows10.0.19041.0\win-x64\publish\" />
+    <Folder Include="UniqueFilesCatcher.WinUI\bin\x64\Debug\net10.0-windows10.0.19041.0\win-x64\" />
+    <Folder Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net10.0-windows10.0.19041.0\win-x64\intermediatexaml\" />
+    <Folder Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net10.0-windows10.0.19041.0\win-x64\refint\" />
+    <Folder Include="UniqueFilesCatcher.WinUI\obj\x64\Debug\net10.0-windows10.0.19041.0\win-x64\ref\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -6,3 +6,6 @@
 bin/
 obj/
 /unique-files-catcher.csproj.user
+/UniqueFilesCatcher.WinUI/.vs
+/UniqueFilesCatcher.WinUI/AppPackages/UniqueFilesCatcher.WinUI_1.0.0.0_x64_Debug_Test
+/UniqueFilesCatcher.WinUI/AppPackages/UniqueFilesCatcher.WinUI_26.0.0.0_x64_Debug_Test
